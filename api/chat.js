@@ -1,3 +1,5 @@
+import { getPersona } from "../utils/characters.js";
+
 export default async function handler(req, res) {
   const { character, message, model } = req.query;
   const persona = getPersona(character);
@@ -42,5 +44,3 @@ export default async function handler(req, res) {
     timestamp: new Date().toLocaleString("en-IN", { hour12: true })
   });
 }
-
-import { getPersona } from "../utils/characters";
