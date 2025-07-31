@@ -1,7 +1,30 @@
 {
-  "name": "AniChatAPI",
+  "name": "anichat-api",
   "version": "1.0.0",
+  "description": "AniChat: Your Ultimate Anime Chatbot – Multiple Characters, Real-Time Updates, Quotes, Recommendations, Powered by Free APIs",
   "main": "index.js",
-  "type": "module",
-  "dependencies": {}
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "node index.js",
+    "build": "echo 'No build step required'"
+  },
+  "keywords": [
+    "anime",
+    "chatbot",
+    "openai",
+    "anichat",
+    "quotes",
+    "recommendations",
+    "vercel",
+    "nodejs",
+    "api"
+  ],
+  "author": "Shinei Nouzen",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "openai": "^4.21.0",
+    "node-fetch": "^3.3.2"
+  },
+  "type": "module"
 }
