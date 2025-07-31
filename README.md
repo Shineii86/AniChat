@@ -4,10 +4,13 @@
 *Your Ultimate Anime Chatbot Engine*
 
 ![Vercel](https://img.shields.io/badge/Deployed-Vercel-black?style=flat&logo=vercel)
-![GitHub repo size](https://img.shields.io/github/repo-size/Shineii86/AniChatAPI)
-![Stars](https://img.shields.io/github/stars/Shineii86/AniChatAPI?style=social)
 ![Issues](https://img.shields.io/github/issues/Shineii86/AniChatAPI)
 ![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)
+
+![Last Commit](https://img.shields.io/github/last-commit/Shineii86/AniChatAPI?style=for-the-badge)
+![Repo Size](https://img.shields.io/github/repo-size/Shineii86/AniChatAPI?style=for-the-badge) [![GitHub Stars](https://img.shields.io/github/stars/Shineii86/AniChatAPI?style=for-the-badge)](https://github.com/Shineii86/AniChatAPI/stargazers) [![GitHub Forks](https://img.shields.io/github/forks/Shineii86/AniChatAPI?style=for-the-badge)](https://github.com/Shineii86/AniChatAPI/fork)
+[![API Status](https://img.shields.io/website?down_color=lightgrey&down_message=offline&label=API%20Status&style=for-the-badge&up_color=green&up_message=online&url=https%3A%2F%2Fanichat.vercel.app)](https://anichat.vercel.app)
+
 
 </div>
 
