@@ -9,10 +9,10 @@ export default async function handler(req, res) {
 
   const persona = getPersona(character);
   const userInput = `${persona}\n\nUser: ${message}`;
-
   const isGemini = model === "gemini";
+
   const apiUrl = isGemini
-    ? `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${process.env.GEMINI_API_KEY}`
+    ? `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${process.env.GEMINI_API_KEY}`
     : "https://api.openai.com/v1/chat/completions";
 
   const headers = {
@@ -46,13 +46,13 @@ export default async function handler(req, res) {
     if (!response.ok) {
       const errorText = await response.text();
       console.error("API Error:", errorText);
-      return res.status(500).json({ error: "AI API call failed", details: errorText });
+      return res.status(500).json({
+        error: "AI API call failed",
+        details: errorText
+      });
     }
 
     const data = await response.json();
-
-    // Debug log
-    console.log("AI Response:", JSON.stringify(data, null, 2));
 
     const reply = isGemini
       ? data?.candidates?.[0]?.content?.parts?.[0]?.text
@@ -60,7 +60,7 @@ export default async function handler(req, res) {
 
     res.status(200).json({
       character,
-      reply: reply || "No Response From @AniChat Model.",
+      reply: reply || "No response from model.",
       creator: "Shinei Nouzen",
       github: "https://github.com/Shineii86",
       telegram: "https://telegram.me/Shineii86",
@@ -69,6 +69,6 @@ export default async function handler(req, res) {
     });
   } catch (err) {
     console.error("Server Error:", err);
-    res.status(500).json({ error: "Server Crashed", details: err.message });
+    res.status(500).json({ error: "Server crashed", details: err.message });
   }
 }
