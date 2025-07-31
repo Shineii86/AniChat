@@ -14,7 +14,7 @@
 
 </div>
 
-> 🌟 Build a full-featured anime chatbot API with multiple characters, real-time updates, quotes, images, recommendations, and free AI integrations – powered by OpenAI, Gemini, Jikan, Waifu.pics, and more!
+> Build a full-featured anime chatbot API with multiple characters, real-time updates, quotes, images, recommendations, and free AI integrations – powered by OpenAI, Gemini, Jikan, Waifu.pics, and more!
 
 ---
 
@@ -94,13 +94,43 @@ cd AniChatAPI
 
 ### 2. Setup Environment
 
-* Rename `.env.example` to `.env` (if you use local server)
-* Or, set the following in Vercel:
+### 🔑 How to Get API Keys
 
-```env
-OPENAI_API_KEY=your_openai_key
-GEMINI_API_KEY=your_gemini_key
+To use this project with AI capabilities, you'll need API keys from both **OpenAI (ChatGPT)** and **Google Gemini**. Here's how to get them:
+
+---
+
+#### 🧠 1. Get OpenAI (ChatGPT) API Key
+
+1. Go to the official [OpenAI Platform](https://platform.openai.com/account/api-keys).
+2. Sign in with your OpenAI account (or create one).
+3. Navigate to the **API Keys** section.
+4. Click **"Create new secret key"**.
+5. Copy and save your API key (starts with `sk-...`).
+
+📌 **Note**: Ensure you have an active billing method added to use GPT-4 or GPT-3.5 APIs.
+
+---
+
+#### 🧠 2. Get Google Gemini API Key
+
+1. Visit the [Google AI Studio](https://makersuite.google.com/).
+2. Sign in with your Google account.
+3. Go to the **"API Keys"** section or [click here directly](https://aistudio.google.com/app/apikey).
+4. Click **"Create API key"** and copy it.
+
+📌 **Note**: Gemini APIs are currently in **preview/beta** and subject to region or usage limits.
+
+### 📁 Where to Add the API Keys
+
+Create a `.env` file in the root of your project and add:
+
 ```
+OPENAI_API_KEY=your_openai_key_here
+GEMINI_API_KEY=your_gemini_key_here
+```
+
+🔒 **Never commit `.env` files to public repositories.**
 
 ### 3. Deploy to Vercel
 
@@ -163,19 +193,15 @@ Huge thanks to the creators of:
 
 ---
 
-## ⚖️ License
-
-This project is licensed under the **MIT License**.
-Feel free to use, remix, and share it with proper credits.
-
----
-
 ## 📬 Support
 
 * Issues: [GitHub Issues](https://github.com/Shineii86/AniRecommendAPI/issues)
 
 ## 🪪 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```json
+This project is licensed under the *MIT License*.
+Feel free to use, remix, and share it with proper credits.
+```
 
 ## 💕 Loved My Work?
 🚨 [Follow me on GitHub](https://github.com/Shineii86/Shineii86)
