@@ -11,8 +11,9 @@ export default async function handler(req, res) {
   const userInput = `${persona}\n\nUser: ${message}`;
   const isGemini = model === "gemini";
 
+  // Gemini Model
   const apiUrl = isGemini
-    ? `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${process.env.GEMINI_API_KEY}`
+    ? `https://generativelanguage.googleapis.com/v1beta/models/chat-bison-001:generateContent?key=${process.env.GEMINI_API_KEY}`
     : "https://api.openai.com/v1/chat/completions";
 
   const headers = {
@@ -43,16 +44,17 @@ export default async function handler(req, res) {
       body: JSON.stringify(payload)
     });
 
+    const rawText = await response.text();
+
     if (!response.ok) {
-      const errorText = await response.text();
-      console.error("API Error:", errorText);
+      console.error("API Error:", rawText);
       return res.status(500).json({
         error: "AI API call failed",
-        details: errorText
+        details: rawText
       });
     }
 
-    const data = await response.json();
+    const data = JSON.parse(rawText);
 
     const reply = isGemini
       ? data?.candidates?.[0]?.content?.parts?.[0]?.text
