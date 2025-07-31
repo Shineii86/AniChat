@@ -1,6 +1,6 @@
 <div align="center">
   
-  # ,l[AniChat API](
+# [AniChatAPI](https://github.com/AniPulse)
 *Your Ultimate Anime Chatbot Engine*
 
 ![Vercel](https://img.shields.io/badge/Deployed-Vercel-black?style=flat&logo=vercel)
