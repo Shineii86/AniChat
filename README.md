@@ -143,7 +143,7 @@ GEMINI_API_KEY=your_gemini_key_here
 ## 🧪 Sample Request
 
 ```bash
-GET /api/chat?character=Megumin&message=KonoSuba!&model=gpt
+GET /api/chat?character=Megumin&message=KonoSuba!&model=gemini
 ```
 
 **Response**:
