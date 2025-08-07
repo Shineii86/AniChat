@@ -42,6 +42,55 @@
 | `/api/recommend`   | Random anime recommendations             | — |
 | `/api/birthdays`   | Today's character birthdays              | — |
 
+### 🚀 Image API Endpoints
+
+| Endpoint | Description | Parameters | Example |
+|----------|-------------|------------|---------|
+| `/api/image` | Get random anime image (SFW/NSFW support) | `category` (optional), `type` (optional) | `?category=neko&type=sfw` |
+| `/api/image` | Get SFW anime image (default) | `category` (waifu, neko, shinobu, etc.) | `?category=waifu` |
+| `/api/image` | Get NSFW anime image | `category` + `type=nsfw` | `?category=neko&type=nsfw` |
+
+### 📋 Parameters
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `category` | string | No | `waifu` | Image category (waifu, neko, shinobu, megumin, etc.) |
+| `type` | string | No | `sfw` | Content type: `sfw` or `nsfw` |
+
+### 🎯 Usage Examples
+
+**Basic Usage:**
+```
+/api/image
+/api/image?category=neko
+```
+
+**SFW Content:**
+```
+/api/image?category=waifu&type=sfw
+/api/image?category=shinobu&type=sfw
+```
+
+**NSFW Content:**
+```
+/api/image?category=waifu&type=nsfw
+/api/image?category=neko&type=nsfw
+```
+
+### 📱 Response Format
+
+```json
+{
+  "image": "https://cdn.waifu.pics/...",
+  "category": "neko",
+  "type": "sfw",
+  "creator": "Shinei Nouzen",
+  "github": "https://github.com/Shineii86",
+  "telegram": "https://telegram.me/Shineii86",
+  "message": "Build with ❤️ by Shinei Nouzen",
+  "timestamp": "8/7/2025, 12:00:00 PM"
+}
+```
 ---
 
 ## 🧠 Character Personalities
